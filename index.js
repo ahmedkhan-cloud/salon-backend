@@ -12,7 +12,7 @@ const server = Hapi.server({
   host: "0.0.0.0",
   routes: {
     cors: {
-      origin: ["https://salon-frontend-five.vercel.app/"],
+      origin: ["https://salon-frontend-five.vercel.app"],
       credentials: true,
       additionalHeaders: ["authorization", "content-type"],
     },
