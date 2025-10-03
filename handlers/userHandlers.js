@@ -5,6 +5,22 @@ const JWT = require("jsonwebtoken");
 const JWT_SECRET = "vqncola84lY()y^go(%^vnE08(yg57pmr0msgpc487)*";
 
 module.exports = {
+  test: async (request, h) => {
+    try {
+      return h
+        .response({
+          status: "success",
+          message: "Server is running",
+        })
+        .code(200);
+    } catch (err) {
+      console.log(
+        "Error occured at login through email handler: ",
+        err.message
+      );
+      return h.response({ status: "server", message: err.message }).code(500);
+    }
+  },
   loginViaEmail: async (request, h) => {
     try {
       const { emailAddress, password, remember } = request.payload;

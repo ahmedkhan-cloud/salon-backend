@@ -3,6 +3,14 @@ const userSchema = require("../joiSchemas/userSchemas");
 
 module.exports = [
   {
+    method: "get",
+    path: "/",
+    handler: userHandlers.test,
+    options: {
+      auth: false,
+    },
+  },
+  {
     method: "POST",
     path: "/api/user/login/email",
     handler: userHandlers.loginViaEmail,
