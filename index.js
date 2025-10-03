@@ -9,7 +9,7 @@ const JWT_SECRET = "vqncola84lY()y^go(%^vnE08(yg57pmr0msgpc487)*";
 
 const server = Hapi.server({
   port: 3000,
-  host: "localhost",
+  host: "0.0.0.0",
   routes: {
     cors: {
       origin: ["http://localhost:5173"],
